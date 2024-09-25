@@ -1,3 +1,4 @@
+import java.awt.im.InputContext;
 import java.util.Scanner;
 
 public class Kafe13 {
@@ -33,4 +34,5 @@ public class Kafe13 {
         System.out.println("Nominal bayar bersih Rp " + nominalInt);
         
     }
+    
 }
