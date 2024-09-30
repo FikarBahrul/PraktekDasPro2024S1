@@ -44,11 +44,13 @@ public class Kafe13 {
             case 'L':
             totalHarga += 0.4 * totalHarga;
             break;
+            default:
+            System.out.println("Size yang dipilih tidak tersedia");
         }
         double diskon = keanggotan ? 0:0.1;
         double nominalBayar = totalHarga - (diskon * totalHarga);
 
-        System.out.println("Item pembelian : " + jumlah + menu + "dengan ukuran cup" + ukuranCup); 
+        System.out.println("Item pembelian : " + jumlah + menu + " dengan ukuran cup" + ukuranCup); 
         System.out.println("Nominal bayar : " + nominalBayar);
     }
     

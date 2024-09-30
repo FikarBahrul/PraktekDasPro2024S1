@@ -28,31 +28,31 @@ public class Siakad13 {
 
         nilaiAkhir = (nilaiKuis * 0.20 + nilaiTugas * 0.15 + nilaiUTS * 0.30 + nilaiUAS * 0.35);
 
-        System.out.println("Nama : " + nama +" NIM : " + nim);
-        System.out.println("Kelas : " + kelas +"Absen : " + absen);
+        System.out.println("Mahasiswa dengan Nama : " + nama +" (NIM " + nim +")");
+        System.out.println("Kelas : " + kelas +" Nomor Absen : " + absen);
         System.out.println("Nilai Akhir : " + nilaiAkhir); 
 
-        if (nilaiAkhir>=80 && nilaiAkhir<=100) {
+        if (nilaiAkhir>80 && nilaiAkhir<=100) {
             System.out.println("Nilai A, setara 4");
             System.out.println("Kualifikasi Sangat Baik");
         } else if 
-            (nilaiAkhir>=73 && nilaiAkhir<=80) {
+            (nilaiAkhir>73 && nilaiAkhir<=80) {
                 System.out.println("Nilai B+, setara 3,5");
                 System.out.println("Lebih dari Baik");
             }else if 
-            (nilaiAkhir>=65 && nilaiAkhir<=73) {
+            (nilaiAkhir>65 && nilaiAkhir<=73) {
                     System.out.println("Nilai B, setara 3");
                     System.out.println("Baik"); 
             }else if 
-            (nilaiAkhir>=60 && nilaiAkhir<=65) {
+            (nilaiAkhir>60 && nilaiAkhir<=65) {
                 System.out.println("Nilai C+, setara 2,5");
                 System.out.println("Lebih dari Cukup"); 
             }else if 
-            (nilaiAkhir>=50 && nilaiAkhir<=60) {
+            (nilaiAkhir>50 && nilaiAkhir<=60) {
                     System.out.println("Nilai C, setara 2");
                     System.out.println("Cukup"); 
             }else if 
-            (nilaiAkhir>=39 && nilaiAkhir<=50) {
+            (nilaiAkhir>39 && nilaiAkhir<=50) {
                     System.out.println("Nilai D, setara 1");
                     System.out.println("Kurang"); 
             }else if 
