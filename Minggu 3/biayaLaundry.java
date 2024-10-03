@@ -8,5 +8,5 @@ public class biayaLaundry {
         double jmlBiaya = cLaundry.nextDouble();
 
 
-    }
+    } 
 }
