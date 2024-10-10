@@ -7,6 +7,5 @@ public class biayaLaundry {
         System.out.print("Masukkan Nominal Bayar :");
         double jmlBiaya = cLaundry.nextDouble();
 
-
     } 
 }
