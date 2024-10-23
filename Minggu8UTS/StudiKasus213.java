@@ -5,7 +5,6 @@
  * Aturan 4 : Jika nyawa pemain dibawah 20% dari total nyawa, akan ada tampilan "Pemain Berada dalam Kondisi Kritis" dan diberikan kesempatan  untuk pemilihan "Melarikan diri" atau "Terus Bertarung"
  * Aturan 5 : Jika Pemain Memilih untuk melanjutkan pertarungan, ronde berikutnya terjadi seperti biasa.
 */
-
 //PROTOTYPE GAGAL
 package Minggu8UTS;
 
@@ -28,7 +27,7 @@ public class StudiKasus213 {
         System.out.print("Kekuatan Serang Musuh : ");
         kekuatanSerangMusuh = sc.nextInt();
 
-        while {  
+        do {  
             
             System.out.println("===Ronde "+ i++ +"===");
             //Pemain Nyerang
@@ -53,6 +52,6 @@ public class StudiKasus213 {
                 }
             }
                 
-        }
+        } while(true);
     }
 }

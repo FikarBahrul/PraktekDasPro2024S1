@@ -1,4 +1,3 @@
-import java.awt.im.InputContext;
 import java.util.Scanner;
 
 public class Kafe13 {
