@@ -5,14 +5,14 @@ public class triangle13 {
         Scanner sc = new Scanner(System.in);
         System.out.print("Masukkan N : ");
         int N = sc.nextInt();
-        int i = 1;
+        int i = 0;
         while (i<=N) {
-            int j=1;
+            int j=0;
             while(j<i) {
                 System.out.print("*");
                 j++;
             }
-            //System.out.println();
+            System.out.println();
             i++;
             
         }
