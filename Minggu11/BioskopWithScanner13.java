@@ -25,7 +25,8 @@ public class BioskopWithScanner13 {
         }
     } */
         while (true) {
-            System.out.println("\n Menu :");
+            //List Menu yang dapat dipilih
+            System.out.println("\n Menu (Pilih Opsi 1-3):");
             System.out.println("1. Input data penonton bioskop");
             System.out.println("2. Menampilkan daftar penonton bioskop");
             System.out.println("3. Keluar");
