@@ -66,6 +66,7 @@ import java.util.Scanner;
                 }
             }
             rata2Keseluruhan = rata2Keseluruhan/10;
+            //rata2Keseluruhan = rata2Keseluruhan/(10*6);
             //TAHAP 3 Output data
             System.out.println("\nOutput Data:");
     

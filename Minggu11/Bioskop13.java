@@ -11,7 +11,7 @@ public class Bioskop13 {
         penonton [2][1] = "Farhan";
         penonton [3][0] = "Gisel";
         //Nomor 3, Menambah Penonton Hana
-        //penonton [3][1] = "Hana";
+        penonton [3][1] = "Hana";
         System.out.println("\n Output.");
 
 
