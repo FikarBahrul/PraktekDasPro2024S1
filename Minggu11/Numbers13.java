@@ -14,12 +14,12 @@ public class Numbers13 {
         for (int i=0; i<myNumbers.length;i++) {
             System.out.println(Arrays.toString(myNumbers[i]));
         }
-        /*Nomor 4, Penambahan Kode
+        // Nomor 4, Penambahan Kode
         System.out.println("\nNomor 4.");
-        for (int i=0, i<myNumbers.length;i++) {
-            System.out.println("Panjang baris ke-"+(i+1)+ " : "+myNumbers[i].length);
+        for (int i = 0; i < myNumbers.length; i++) {
+            System.out.println("Panjang baris ke-" + (i + 1) + " : " + myNumbers[i].length);
         }
-        */
+        
     }
     
 }
