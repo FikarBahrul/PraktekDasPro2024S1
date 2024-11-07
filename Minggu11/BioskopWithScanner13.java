@@ -47,9 +47,19 @@ public class BioskopWithScanner13 {
         baris = sc.nextInt();
         System.out.print("Masukkan kolom : ");
         kolom = sc.nextInt();
-        penonton[baris - 1][kolom - 1] = nama; //Memasukkan Input ke dalam Array
-        sc.nextLine(); //membersihkan Line
+        //Check input Data sesuai dengan bangku/kursi bioskop apakah sudah terisi atau belum
+        if (baris >= 1 && baris <= penonton.length && kolom >= 1 && kolom <= penonton[0].length) {
+            if (penonton[baris - 1][kolom - 1] != null) { //untuk check jika kursi tidak kosong
+                System.out.println("Mohon maaf, kursi bioskop tersebut sudah di Order. Silakan pilih kursi lain.");
+                } else { //untuk menambah penonton jika kursi kosong
+                    penonton[baris - 1][kolom - 1] = nama;
+                System.out.println("Data penonton " + nama + " berhasil ditambahkan di baris " + baris + " dan kolom kursi bioskop " + kolom);
+                }
+            } else {
+                    System.out.println("Nomor baris atau kolom tidak valid."); //Input pengguna tidak valid
             }
+    
+        }
             
             
             
