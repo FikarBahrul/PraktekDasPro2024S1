@@ -19,7 +19,7 @@ public class BioskopWithScanner13 {
 
         System.out.print("Input penonton lainnya ? (y/n) : ");
         next = sc.nextLine();
-        if (next.equalsIgnoreCase("n")) {
+        if (next.equalsIgnoreCase("n")) {d
             break;
 
         }
@@ -31,10 +31,13 @@ public class BioskopWithScanner13 {
             System.out.println("2. Menampilkan daftar penonton bioskop");
             System.out.println("3. Keluar");
             
+            
             //input opsi
             System.out.println("Pilih Menu : ");
             opsi = sc.nextInt();
             sc.nextLine(); //membersihkan Line
+
+
 
             //Opsi 1 adalah Input Data masuk ke Array
             if (opsi == 1) {
@@ -47,6 +50,9 @@ public class BioskopWithScanner13 {
         penonton[baris - 1][kolom - 1] = nama; //Memasukkan Input ke dalam Array
         sc.nextLine(); //membersihkan Line
             }
+            
+            
+            
             //Opsi 2 adalah Output untuk menampilkan daftar penonton bioskop saat ini.
             else if (opsi == 2) {
                 System.out.println("\n Daftar penonton bioskop saat ini : "); {
@@ -64,6 +70,9 @@ public class BioskopWithScanner13 {
                 }
                
             }
+            
+            
+            
             //Opsi 3 adalah Output untuk Keluar dari Bioskop
             else if (opsi == 3) {
                 System.out.println("Terimakasih sudah order !");

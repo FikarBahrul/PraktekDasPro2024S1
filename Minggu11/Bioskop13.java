@@ -11,7 +11,7 @@ public class Bioskop13 {
         penonton [2][1] = "Farhan";
         penonton [3][0] = "Gisel";
         //Nomor 3, Menambah Penonton Hana
-        //penonton [3][1] = "Hana";
+        penonton [3][1] = "Hana";
         System.out.println("\n Output.");
 
 
@@ -55,7 +55,7 @@ public class Bioskop13 {
         //Nomor 9, Modifikasi Penambahan Output Penonton setiap baris
         System.out.println("\n Nomor 9.");
         for (int i = 0; i < penonton.length; i++) {
-            System.out.println("Penonton pada baris ke-"+(i+1)+" : "+String.join(", "));
+            System.out.println("Penonton pada baris ke-"+(i+1)+" : "+String.join(", ", penonton[i]));
         }
         
 
