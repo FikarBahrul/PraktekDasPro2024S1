@@ -15,7 +15,7 @@ public class SIAKAD13 {
 
         //Input Nilai Mahasiswwa
         for (int i = 0; i < nilai.length; i++) {
-            System.out.println("Input nilai mahasiswa ke-"+(i+1));
+            System.out.println("\nInput nilai mahasiswa ke-"+(i+1));
             double totalPerSiswa =0;
             for (int j = 0; j < nilai[i].length; j++) {
                 System.out.println("Nilai mata kuliah "+(j+1)+" : ");
