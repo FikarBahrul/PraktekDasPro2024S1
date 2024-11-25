@@ -2,9 +2,9 @@ package Minggu13;
 
 import java.util.Scanner;
 
-public class Kubus13 {
+public class test11 {
     public static void main(String[] args) {
-        Scanner input = new Scanner(System.in);
+        Scanner sc = new Scanner(System.in);
         boolean running = true;
 
         while (running) {
@@ -14,12 +14,12 @@ public class Kubus13 {
             System.out.println("2. Rekap Penjualan Cafe");
             System.out.println("3. Keluar");
             System.out.print("Masukkan pilihan : ");
-            int pilihan = input.nextInt();
+            int pilihan = sc.nextInt();
 
             if (pilihan == 1) {
                 // Bagian Kubus
                 System.out.print("Masukkan panjang sisi kubus : ");
-                double sisi = input.nextDouble();
+                double sisi = sc.nextDouble();
                 double luasPermukaan = hitungLuasPermukaan(sisi);
                 double volume = hitungVolume(sisi);
                 
@@ -28,13 +28,13 @@ public class Kubus13 {
             } else if (pilihan == 2) {
                 // Bagian Rekap Penjualan
                 System.out.println("\n<=== Rekap Penjualan ===>");
-                tampilkanTotalPenjualan();
+                TotalPenjualan();
                 System.out.println();
-                tampilkanPenjualanPerHari();
+                PenjualanPerHari();
                 System.out.println();
-                tampilkanMenuTertinggi();
+                MenuTertinggi();
                 System.out.println();
-                tampilkanRataRataPenjualan();
+                RataRataPenjualan();
             } else if (pilihan == 3) {
                 // Keluar program
                 System.out.println("Operasi selesai.");
@@ -67,7 +67,7 @@ public class Kubus13 {
     static String[] menu = {">-> Kopi", ">-> Teh", ">-> Es Degan", ">-> Roti Bakar", ">-> Gorengan"};
 
     // Fungsi untuk menampilkan total penjualan
-    static void tampilkanTotalPenjualan() {
+    static void TotalPenjualan() {
         for (int i = 0; i < menu.length; i++) {
             int total = 0;
             for (int j = 0; j < penjualan[i].length; j++) {
@@ -79,7 +79,7 @@ public class Kubus13 {
 
 
 // Fungsi untuk menampilkan data penjualan per hari
-static void tampilkanPenjualanPerHari() {
+static void PenjualanPerHari() {
     System.out.println("\n Data penjualan dari hari ke-1 hingga hari ke-7 : ");
     for (int i = 0; i < menu.length; i++) {
         System.out.print(menu[i] + " : [");
@@ -94,7 +94,7 @@ static void tampilkanPenjualanPerHari() {
 }
 
     // Fungsi untuk menampilkan menu dengan penjualan tertinggi
-    static void tampilkanMenuTertinggi() {
+    static void MenuTertinggi() {
         int maxPenjualan = 0;
         String menuTerlaris = "";
         for (int i = 0; i < menu.length; i++) {
@@ -111,7 +111,7 @@ static void tampilkanPenjualanPerHari() {
     }
 
     // Fungsi untuk menghitung rata-rata penjualan per menu
-    static void tampilkanRataRataPenjualan() {
+    static void RataRataPenjualan() {
         for (int i = 0; i < menu.length; i++) {
             int total = 0;
             for (int j = 0; j < penjualan[i].length; j++) {
