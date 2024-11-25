@@ -1,4 +1,4 @@
-package Minggu12;
+package Minggu13;
 import java.util.Scanner;
 
 public class Kubus13 {
@@ -30,7 +30,7 @@ public class Kubus13 {
             } else if (pilihan == 2) {
                 // Bagian Rekap Penjualan
                 System.out.print("Masukkan jumlah mahasiswa: ");
-                int jmlMahasiswa = sc.nextInt();
+                int jmlMHS = sc.nextInt();
                 System.out.print("Masukkan jumlah tugas: ");
                 int jmlTugas = sc.nextInt();
 
