@@ -1,12 +1,10 @@
-package Minggu12;
+package Minggu13;
+
 import java.util.Scanner;
 
 public class Kubus13 {
-    static Scanner sc = new Scanner(System.in);
-    static int[][] penjualan; // Deklarasi array penjualan
-    static String[] menu = {">-> Kopi", ">-> Teh", ">-> Es Degan", ">-> Roti Bakar", ">-> Gorengan"};
-
     public static void main(String[] args) {
+        Scanner input = new Scanner(System.in);
         boolean running = true;
 
         while (running) {
@@ -16,12 +14,12 @@ public class Kubus13 {
             System.out.println("2. Rekap Penjualan Cafe");
             System.out.println("3. Keluar");
             System.out.print("Masukkan pilihan : ");
-            int pilihan = sc.nextInt();
+            int pilihan = input.nextInt();
 
             if (pilihan == 1) {
                 // Bagian Kubus
                 System.out.print("Masukkan panjang sisi kubus : ");
-                double sisi = sc.nextDouble();
+                double sisi = input.nextDouble();
                 double luasPermukaan = hitungLuasPermukaan(sisi);
                 double volume = hitungVolume(sisi);
                 
@@ -29,31 +27,14 @@ public class Kubus13 {
                 System.out.println("Volume Kubus : " + volume);
             } else if (pilihan == 2) {
                 // Bagian Rekap Penjualan
-                System.out.print("Masukkan jumlah mahasiswa: ");
-                int jmlMahasiswa = sc.nextInt();
-                System.out.print("Masukkan jumlah tugas: ");
-                int jmlTugas = sc.nextInt();
-
-                // Inisialisasi array penjualan berdasarkan jumlah menu dan tugas
-                penjualan = new int[menu.length][jmlTugas];
-
-                // Mengisi data penjualan berdasarkan sc pengguna
-                for (int i = 0; i < menu.length; i++) {
-                    System.out.println("Masukkan penjualan untuk " + menu[i] + ":");
-                    for (int j = 0; j < jmlTugas; j++) {
-                        System.out.print("Tugas " + (j + 1) + ": ");
-                        penjualan[i][j] = sc.nextInt();
-                    }
-                }
-
                 System.out.println("\n<=== Rekap Penjualan ===>");
-                TotalPenjualan();
+                tampilkanTotalPenjualan();
                 System.out.println();
-                PenjualanPerHari();
+                tampilkanPenjualanPerHari();
                 System.out.println();
-                MenuTertinggi();
+                tampilkanMenuTertinggi();
                 System.out.println();
-                RataRataPenjualan();
+                tampilkanRataRataPenjualan();
             } else if (pilihan == 3) {
                 // Keluar program
                 System.out.println("Operasi selesai.");
@@ -75,8 +56,18 @@ public class Kubus13 {
         return sisi * sisi * sisi;
     }
 
+    // Data penjualan cafe
+    static int[][] penjualan = {
+        {20, 20, 25, 20, 10, 60, 10}, // Kopi
+        {30, 80, 40, 10, 15, 20, 25}, // Teh
+        {5, 9, 20, 25, 10, 5, 45},    // Es Degan
+        {50, 8, 17, 18, 10, 30, 15 },  // Roti Bakar
+        {15, 10, 16, 15, 5, 10, 55 }   // Gorengan
+    };
+    static String[] menu = {">-> Kopi", ">-> Teh", ">-> Es Degan", ">-> Roti Bakar", ">-> Gorengan"};
+
     // Fungsi untuk menampilkan total penjualan
-    static void TotalPenjualan() {
+    static void tampilkanTotalPenjualan() {
         for (int i = 0; i < menu.length; i++) {
             int total = 0;
             for (int j = 0; j < penjualan[i].length; j++) {
@@ -86,48 +77,48 @@ public class Kubus13 {
         }
     }
 
-    // Fungsi untuk menampilkan data penjualan per hari
-    static void PenjualanPerHari() {
-        System.out.println("\nData penjualan dari hari ke-1 hingga hari ke-" + penjualan[0].length + ":");
-        for (int i = 0; i < menu.length; i++) {
-            System.out.print(menu[i] + " : [");
-            for (int j = 0; j < penjualan[i].length; j++) {
-                System.out.print(penjualan[i][j]);
-                if (j < penjualan[i].length - 1) {
-                    System.out.print(", ");
-                }
+
+// Fungsi untuk menampilkan data penjualan per hari
+static void tampilkanPenjualanPerHari() {
+    System.out.println("\n Data penjualan dari hari ke-1 hingga hari ke-7 : ");
+    for (int i = 0; i < menu.length; i++) {
+        System.out.print(menu[i] + " : [");
+        for (int j = 0; j < penjualan[i].length; j++) {
+            System.out.print(penjualan[i][j]);
+            if (j < penjualan[i].length - 1) { //mencegah elemen terakhir
+                System.out.print("], ["); // Menambahkan koma dan kurung jika bukan elemen terakhir
             }
-            System.out.println("]");
         }
+        System.out.println("]");
     }
+}
 
     // Fungsi untuk menampilkan menu dengan penjualan tertinggi
-    static void MenuTertinggi() {
-        int maxIndex = 0;
-        int maxTotal = 0;
+    static void tampilkanMenuTertinggi() {
+        int maxPenjualan = 0;
+        String menuTerlaris = "";
         for (int i = 0; i < menu.length; i++) {
             int total = 0;
             for (int j = 0; j < penjualan[i].length; j++) {
                 total += penjualan[i][j];
             }
-            if (total > maxTotal) {
-                maxTotal = total;
-                maxIndex = i;
+            if (total > maxPenjualan) {
+                maxPenjualan = total;
+                menuTerlaris = menu[i];
             }
         }
-        System.out.println("Menu dengan penjualan tertinggi: " + menu[maxIndex] + " dengan total " + maxTotal);
+        System.out.println("Menu dengan penjualan tertinggi: " + menuTerlaris + " (Total : " + maxPenjualan + ")");
     }
 
-    // Fungsi untuk menampilkan rata-rata penjualan
-    static void RataRataPenjualan() {
-        System.out.println("Rata-rata penjualan per menu:");
+    // Fungsi untuk menghitung rata-rata penjualan per menu
+    static void tampilkanRataRataPenjualan() {
         for (int i = 0; i < menu.length; i++) {
             int total = 0;
             for (int j = 0; j < penjualan[i].length; j++) {
                 total += penjualan[i][j];
             }
             double rataRata = (double) total / penjualan[i].length;
-            System.out.println(menu[i] + " : " + rataRata);
+            System.out.println("Rata-rata penjualan " + menu[i] + " : " + rataRata);
         }
     }
 }
