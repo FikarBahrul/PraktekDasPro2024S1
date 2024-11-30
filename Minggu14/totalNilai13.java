@@ -28,10 +28,10 @@ public class totalNilai13 {
         System.out.print("Masukkan jumlah angka yang ingin dihitung (x) : ");
         int n = sc.nextInt();
 
-        // Membuat array untuk menyimpan angka yang dimasukkan pengguna
+        // Array untuk menyimpan angka yang dimasukkan pengguna
         int[] angka = new int[n];
 
-        // Meminta pengguna untuk memasukkan angka satu per satu
+        // Meminta pengguna untuk input angka satu per satu
         for (int i = 0; i < n; i++) {
             System.out.print("Masukkan angka ke-" + (n - i) + " : ");
             angka[i] = sc.nextInt();
